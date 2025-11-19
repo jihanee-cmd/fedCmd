@@ -27,7 +27,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 </details>
 
 
-rgtethtrhtg
+
 
 
 ## Je website
@@ -44,7 +44,7 @@ rgtethtrhtg
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/youtooz2epagina.png" width="375px" alt="tweede pagina met een inzoom op een product van dee website.">
+  <img src="readme-images/youtooze2epagina.png" width="375px" alt="tweede pagina met een inzoom op een product van dee website.">
  
 </details>
 
