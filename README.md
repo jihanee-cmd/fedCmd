@@ -54,10 +54,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
-
+  
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-  breakdown schets <img src="readme-images/fedcmdschets.png">
+  MIjn grootste bevinding is dat mijn hele website bestaat uit divjes.
+   <img src="readme-images/test1.jpg" width="375px" alt="bestaan uit allemaal divjes">
+    <img src="readme-images/test2.jpg" width="375px" alt="bestaan uit allemaal divjes">
+     <img src="readme-images/test3.jpg" width="375px" alt="bestaan uit allemaal divjes">
+      <img src="readme-images/test4.jpg" width="375px" alt="bestaan uit allemaal divjes"> 
+
+  
 
 </details>
 
@@ -69,7 +75,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/fedcmdschets.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
