@@ -1,23 +1,82 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+
+nav li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+	flex-wrap: wrap;
+	
+}
+
+nav li button:first-of-type {
+    margin-left: auto; 
+}
+
+section img {
+    align-items: center;
+    width: 100%;     /* past de foto aan de breedte van het scherm aan */
+    height: auto;    /* behoudt verhoudingen */
+    max-width: 300px; /* (optioneel) voorkomt dat ze té groot worden */
+    display: block;   /* haalt rare whitespace weg */
+    margin-bottom: 20px; /* ruimte tussen je foto's */
+    
+}
+
+section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section li {
+    width: 100%;
+}
+
+.timeline {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+#countdown {
+    font-family: 'Arial', sans-serif;
+    color: #FE467C;
+    font-size: 20px;
+}
+
+.timeline p {
+    margin-right: auto; 
+    
+}
+ 
+.timeline button{
+    background-color: #FE467C;
+    padding: 5px 10px;
 }
 
 
-
-
+.strangerthings{
+    background-color: red;
+}
+header li button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;       /* maakt het rond */
+    border: none;
+    background-color: #FE467C;    /* kies je kleur */
+    color: white;
+    font-size: 24px;          /* grootte van het icoon */
+    cursor: pointer;
+}
 
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-:root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-}
+
 
 
 
