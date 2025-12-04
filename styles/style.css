@@ -2,26 +2,31 @@
 /* CSS REMEDY */
 /**************/
 
-nav li {
+header li button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;      
+    border: none;
+    background-color: #FE467C;    
+    color: white;
+    font-size: 24px;       
+}   
+
+header nav ul {
+    list-style: none;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    width: 100%;
-	flex-wrap: wrap;
-	
 }
 
-nav li button:first-of-type {
-    margin-left: auto; 
-}
 
 section img {
     align-items: center;
     width: 100%;     /* past de foto aan de breedte van het scherm aan */
     height: auto;    /* behoudt verhoudingen */
-    max-width: 300px; /* (optioneel) voorkomt dat ze té groot worden */
+    max-width: 20em; /* (optioneel) voorkomt dat ze té groot worden */
     display: block;   /* haalt rare whitespace weg */
-    margin-bottom: 20px; /* ruimte tussen je foto's */
-    
+    margin-bottom: 1em; /* ruimte tussen je foto's */
 }
 
 section ul {
@@ -41,8 +46,12 @@ section li {
     padding: 1em;
 }
 
+h2{
+    text-align: center;
+}
+
 #countdown {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter var', Helvetica, system-ui, sans-serif;
     color: #FE467C;
     font-size: 20px;
 }
@@ -58,33 +67,309 @@ section li {
 }
 
 
-.strangerthings{
+
+.strangerthings {
     background-color: red;
+    position: relative;        /* nodig om h3 binnen dit element te positioneren */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    
 }
+
+.strangerthings h3 {
+    position: absolute;        /* zet tekst boven de afbeelding */
+    top: 0.2em;   
+    font-family: 'Inter var', Helvetica, system-ui, sans-serif;;              /* hoe ver vanaf de bovenkant */
+    font-size: 2rem;
+    font-style:oblique;
+    color: white;              /* zodat het leesbaar blijft */
+    text-shadow: 2px 2px 4px black; /* maakt tekst beter zichtbaar */
+    transform: rotate(-3deg);
+    z-index: 10;
+}
+
+.strangerthings button{
+    position:absolute;
+    top: 20em;
+    padding: 1em 2em;
+    border-radius: 2em;
+    background-color: black;
+    color: white;
+}
+
+.strangerthings img:hover{
+    transform: scale(1.1);
+    transform-origin: bottom;
+}
+
+.strangerthings img{
+    transition: transform 0.2s ease; /*omdat het dan altijd geld*/
+
+}
+
+.aradir {
+    background-color: blue;
+    position: relative;        /* nodig om h3 binnen dit element te positioneren */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.aradir h3 {
+    position: absolute;        /* zet tekst boven de afbeelding */
+    top: 0.2em;   
+    font-family: 'Inter var', Helvetica, system-ui, sans-serif;;              /* hoe ver vanaf de bovenkant */
+    font-size: 2rem;
+    font-style:oblique;
+    color: white;              /* zodat het leesbaar blijft */
+    text-shadow: 2px 2px 4px black; /* maakt tekst beter zichtbaar */
+    transform: rotate(-3deg);
+    z-index: 10;
+}
+
+.aradir button{
+   position: absolute;
+   top: 17em;
+    padding: 1em 2em;
+    border-radius: 2em;
+    background-color: black;
+    color: white;
+}
+
+.aradir img:hover{
+    transform: scale(1.1);
+    transform-origin: bottom;
+}
+
+.aradir img{
+    transition: transform 0.2s ease; /*omdat het dan altijd geld*/
+    margin-top: 3em;
+
+}
+
+.peak {
+    background-color: green;
+    position: relative;        /* nodig om h3 binnen dit element te positioneren */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.peak h3 {
+    position: absolute;        /* zet tekst boven de afbeelding */
+    top: 0.2em;   
+    font-family: 'Inter var', Helvetica, system-ui, sans-serif;;              /* hoe ver vanaf de bovenkant */
+    font-size: 2rem;
+    font-style:oblique;
+    color: white;              /* zodat het leesbaar blijft */
+    text-shadow: 2px 2px 4px black; /* maakt tekst beter zichtbaar */
+    transform: rotate(-3deg);
+    z-index: 10;
+}
+
+.peak button{
+   position: absolute;
+   top: 20em;
+    padding: 1em 2em;
+    border-radius: 2em;
+    background-color: black;
+    color: white;
+}
+
+.peak img:hover{
+    transform: scale(1.1);
+    transform-origin: bottom;
+}
+
+.peak img{
+    transition: transform 0.2s ease; /*omdat het dan altijd geld*/
+
+}
+
+
 header li button{
     width: 50px;
     height: 50px;
-    border-radius: 50%;       /* maakt het rond */
+    border-radius: 50%;      
     border: none;
-    background-color: #FE467C;    /* kies je kleur */
+    background-color: #FE467C;    
     color: white;
-    font-size: 24px;          /* grootte van het icoon */
-    cursor: pointer;
+    font-size: 24px;       
+}   
+  
+
+
+.carrousel {
+    overflow: hidden;        /* voorkomt dat beelden eruit vallen */
+    width: 100%;
+    position: relative;
+    overflow-x: auto;     /* horizontaal scrollbaar maken */
+    overflow-y: hidden;   /* geen verticale scrollbalk */
+    white-space: nowrap;  /* voorkomt afbreken */
+    scroll-behavior: smooth; /* smooth scrollen */
+    width: 100%;
+
+}
+
+.carrousel ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    position: relative;
+    left: 0;
+    animation: bannermove 20s linear infinite;
+}
+
+.carrousel ul img {
+    width: 10em;
+}
+
+@keyframes bannermove {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
 }
 
 
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
+.communitycourrasel {
+    overflow: hidden;        /* voorkomt dat beelden eruit vallen */
+    width: 100%;
+    position: relative;
+    overflow-x: auto;     /* horizontaal scrollbaar maken */
+    overflow-y: hidden;   /* geen verticale scrollbalk */
+    white-space: nowrap;  /* voorkomt afbreken */
+    scroll-behavior: smooth; /* smooth scrollen */
+    width: 100%;
+}
+
+.communitycourrasel ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    position: relative;
+    left: 0;
+    animation: bannermove 20s linear infinite;
+}
+
+.communitycourrasel ul img {
+    width: 10em;
+}
+
+@keyframes bannermove {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.livenow ul {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;  
+    justify-content: center;
+    gap: 4em;
+}
+
+.livenow ul img{
+    background-color: #F3DBFF;
+    padding : 1em;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
+
+
+.otsukaray {
+    background-color: #FF4669;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7em;
+    position: relative;
+}
+
+.otsukaray p:first-of-type {
+    position: absolute;
+    bottom: 14em;
+    background: linear-gradient(90deg, #F3DBFF , #AB67EA);
+    padding: 0.6em 1em;
+    border-radius: 1em;
+    font-size: 0.8em;
+}
+
+.otsukaray p:nth-of-type(2){
+    color: gray;
+}
+
+
+.wiggly {
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7em;
+    position: relative;      /* ← belangrijk! */
+}
+
+.wiggly p:first-of-type {
+    position: absolute;
+    bottom: 14em;
+    background: linear-gradient(90deg, #25AC39, #9AE603);
+    padding: 0.6em 1em;
+    border-radius: 1em;
+    font-size: 0.8em;
+}
+
+
+.wiggly p:nth-of-type(2){
+    color: gray;
+}
 
 
 
 
+.blackfridaydeal{
+    display: grid;
+    place-items: center;
+}
+
+.community{
+    background-color: #FE467C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em;
+}
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
-
+.ProductCard_media_badge_inner {
+    padding: 24px 20px 16px;
+    width: 4ch;
+    height: 4ch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--heading-fontFamily);
+    font-weight: 400;
+    line-height: 1em;
+    font-size: 26px;
+    letter-spacing: .05ch;
+    text-align: center;
+    color: var(--media-bg);
+    background: var(--heading-bg-default, #FF467F linear-gradient(to right, #FF467F 0%, #FF4669 94%));
+    transform: rotate(-21deg) scale(var(--media-scale));
+    transition: transform .2s;
+    clip-path: polygon(100% 50%, 94.016642033% 59.3560260868%, 95.6772728821% 70.3368321538%, 86.4057647469% 76.4503363532%, 83.4565303179% 87.1572412739%, 72.5% 88.9711431703%, 65.4508497187% 97.5528258148%, 54.703780847% 94.7534852916%, 44.7735768366% 99.7260947684%, 36.0942352531% 92.7975432333%, 25% 93.3012701892%, 19.8891227139% 83.4415171465%, 9.5491502813% 79.3892626146%, 8.8904544062% 68.3031489384%, 1.0926199641% 60.395584541%, 5.0000000034% 50.0000000005%, 1.0926199789% 39.6044154614%, 8.8904544593% 31.6968510698%, 9.5491504885% 20.6107374194%, 19.8891233248% 16.5584829594%, 25.0000020917% 6.6987301927%, 36.0942407425% 7.2024578193%, 44.7735937531% .2739086307%, 54.7038211889% 5.2465231853%, 65.4509636322% 2.4471991693%, 72.5002507348% 11.0289141303%, 83.4571879873% 12.8429150833%, 86.4071170675% 23.5499976242%, 95.6806032369% 29.6640210704%, 94.0231005276% 40.645688223%);
+}
