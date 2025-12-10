@@ -1,24 +1,85 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+*{
+    font-family: 'Luckiest Guy', Helvetica, system-ui, sans-serif;;
+}
 
-header li button{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;      
-    border: none;
-    background-color: #FE467C;    
-    color: white;
-    font-size: 24px;       
-}   
+
+
+body {
+  background: var(--bg);
+  color: var(--clr);
+  transition: 0.3s;
+}
+
+:root {
+  /* colors */
+  --color-header-background: white;
+  --color-footer-background: #FE467C;
+  --color-nav-background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-header-background: grey;
+    --color-footer-background: black;
+    --color-main-backround:black;
+    --color-text-backround: white;
+    --color-nav-background: grey;
+  }
+}
+
+header {
+  background: var(--color-header-background);
+}
+body{
+  background: var(--color-nav-background);
+}
+main{
+background: var(--color-main-backround);
+color: var(--color-text-backround);
+}
+nav {
+  background: var(--color-nav-background);
+}
+footer {
+  background: var(--color-footer-background);
+  color: var(--color-text-backround);
+}
+
+
+
+/*bron: uit dlo*/
+
 
 header nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;  /* <-- duwt logo links, buttons rechts */
+    padding: 0;
+    margin: 0;
 }
 
+header li {
+    margin-left: 10px;
+}
+
+header li:nth-child(2) {
+     margin-left: auto; 
+}
+
+header li button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #FE467C;
+    color: white;
+    font-size: 24px;
+}
 
 section img {
     align-items: center;
@@ -40,14 +101,17 @@ section li {
 }
 
 .timeline {
-    background-color: black;
+     background: linear-gradient(90deg, #1b1b1b , #4f4f4f);
     display: flex;
     align-items: center;
-    padding: 1em;
+    padding: 0;
+    margin:0;
+    
 }
 
 h2{
     text-align: center;
+    font-weight: bold;
 }
 
 #countdown {
@@ -58,12 +122,15 @@ h2{
 
 .timeline p {
     margin-right: auto; 
+    padding-left:1em;
     
 }
  
 .timeline button{
     background-color: #FE467C;
-    padding: 5px 10px;
+    margin-right: 2em;
+    padding: 0.6em;
+
 }
 
 
@@ -103,6 +170,7 @@ h2{
     transform: scale(1.1);
     transform-origin: bottom;
 }
+
 
 .strangerthings img{
     transition: transform 0.2s ease; /*omdat het dan altijd geld*/
@@ -207,7 +275,6 @@ header li button{
 
 .carrousel {
     overflow: hidden;        /* voorkomt dat beelden eruit vallen */
-    width: 100%;
     position: relative;
     overflow-x: auto;     /* horizontaal scrollbaar maken */
     overflow-y: hidden;   /* geen verticale scrollbalk */
@@ -229,7 +296,14 @@ header li button{
 
 .carrousel ul img {
     width: 10em;
+    clip-path: polygon(
+    10% 10%,    /* linker boven = laag  */
+    100% 0%,   /* rechter boven = hoog */
+    100% 90%,  /* rechter onder = laag */
+    10% 100%    /* linker onder = hoog */
+);
 }
+
 
 @keyframes bannermove {
     0% {
@@ -242,57 +316,146 @@ header li button{
 
 
 .communitycourrasel {
-    overflow: hidden;        /* voorkomt dat beelden eruit vallen */
-    width: 100%;
-    position: relative;
-    overflow-x: auto;     /* horizontaal scrollbaar maken */
-    overflow-y: hidden;   /* geen verticale scrollbalk */
-    white-space: nowrap;  /* voorkomt afbreken */
-    scroll-behavior: smooth; /* smooth scrollen */
-    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: #FE467C;
+    margin: 2em 2em;
+    margin-top: -3em;
+    padding: 3em 0;   /* hoogte toevoegen */
+   
+    clip-path: polygon(
+        0 0%,
+        100% 0%,
+        100% 90%,
+        0 100%
+    );
 }
 
 .communitycourrasel ul {
-    list-style: none;
+      list-style: none;
     display: flex;
-    flex-direction: row;
-    gap: 1em;
-    position: relative;
-    left: 0;
+    gap: 3em;
     animation: bannermove 20s linear infinite;
 }
 
 .communitycourrasel ul img {
-    width: 10em;
+       width: 15em;
+    border-radius: 1em;
+    display: block;  
+    opacity: 1;     
+    transform: translateY(0); 
 }
 
 @keyframes bannermove {
     0% {
-        left: 0;
+        transform: translateX(0);
     }
     100% {
-        left: -100%;
+        transform: translateX(-100%);
     }
 }
+
+/* Bounce animatie zodra de img zichtbaar wordt */
+
+.communitycourrasel img.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes bounceIn {
+    0%   { transform: translateY(40px); }
+    40%  { transform: translateY(-20px); }
+    65%  { transform: translateY(10px); }
+    85%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+/* bounce animatie van chat gpt*/
+
+.community h2{
+ color: aliceblue;
+ font-size: 3em;
+ font-weight: 300;
+ text-align: left;
+}
+.community p{
+    color: aliceblue;
+    margin-top: -1em;
+    text-align: left;
+    
+}
+.community button{
+    margin-top: 2em;
+    background-color: black;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 1em;
+}
+
+.community {
+    background-color: #FE467C;
+    margin: 2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:1em;
+     clip-path: polygon(
+        0 10%,    /* linkerbovenpunt 10% naar beneden */
+        100% 0%,  /* rechterbovenpunt helemaal boven */
+        100% 100%, /* rechteronderpunt normaal */
+        0 100%     /* linkeronderpunt normaal */
+    );
+}
+/*bron chatgpt voor de clip-path*/
+
+
+.livenow {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+    justify-content: center; 
+    gap: 2em;               
+}
+
+/* Spinning animatie */
+.spinning {
+    display: inline-block;  
+    animation: mySpinner 4s linear infinite;
+    font-size: 3em;         
+    color:#e03a6c;             
+    text-align: center;
+}
+
+@keyframes mySpinner {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*bron https://www.youtube.com/watch?v=HZHHBwzmJLk*/
 
 .livenow ul {
     display: flex;
     flex-direction: row;
-    align-items: stretch;  
+    align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 4em;
+    list-style: none;
+    padding: 0;
 }
 
-.livenow ul img{
+.livenow ul img {
     background-color: #F3DBFF;
-    padding : 1em;
+    padding: 1em;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    height: 8em;
+    object-fit: contain;
 }
-
 
 
 .otsukaray {
-    background-color: #FF4669;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -302,7 +465,7 @@ header li button{
 
 .otsukaray p:first-of-type {
     position: absolute;
-    bottom: 14em;
+    bottom: 8em;
     background: linear-gradient(90deg, #F3DBFF , #AB67EA);
     padding: 0.6em 1em;
     border-radius: 1em;
@@ -311,21 +474,31 @@ header li button{
 
 .otsukaray p:nth-of-type(2){
     color: gray;
+   margin-top: 0.1em;
+}
+.otsukaray p:nth-of-type(3){
+  margin-top: -1em;
+
+}
+.otsukaray h3{
+    color: #AB67EA;
+    margin-top: -0.5em;
+    font-size: 1.3em;
 }
 
-
 .wiggly {
-    background-color: greenyellow;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 7em;
-    position: relative;      /* ← belangrijk! */
+    position: relative;      
 }
+
 
 .wiggly p:first-of-type {
     position: absolute;
-    bottom: 14em;
+    bottom: 8em;
     background: linear-gradient(90deg, #25AC39, #9AE603);
     padding: 0.6em 1em;
     border-radius: 1em;
@@ -335,41 +508,489 @@ header li button{
 
 .wiggly p:nth-of-type(2){
     color: gray;
+    margin-top: auto;
 }
 
+.wiggly p:nth-of-type(3){
+  margin-top: -1em;
 
+}
+.wiggly h3{
+    color: #38f144;
+    margin-top: -0.5em;
+    font-size: 1.3em;
+}
 
 
 .blackfridaydeal{
     display: grid;
     place-items: center;
+    margin-top: 3em;
 }
 
-.community{
-    background-color: #FE467C;
+
+
+
+.negenicoon{
+   position: absolute;
+   padding: 1em 1em;
+   margin: 1em 1em ;
+    background-color: #AB67EA;
+    margin-right: 4em;
+    transform: rotate(2deg);
+    clip-path: polygon(100% 50%, 94.016642033% 59.3560260868%, 95.6772728821% 70.3368321538%, 86.4057647469% 76.4503363532%, 83.4565303179% 87.1572412739%, 72.5% 88.9711431703%, 65.4508497187% 97.5528258148%, 54.703780847% 94.7534852916%, 44.7735768366% 99.7260947684%, 36.0942352531% 92.7975432333%, 25% 93.3012701892%, 19.8891227139% 83.4415171465%, 9.5491502813% 79.3892626146%, 8.8904544062% 68.3031489384%, 1.0926199641% 60.395584541%, 5.0000000034% 50.0000000005%, 1.0926199789% 39.6044154614%, 8.8904544593% 31.6968510698%, 9.5491504885% 20.6107374194%, 19.8891233248% 16.5584829594%, 25.0000020917% 6.6987301927%, 36.0942407425% 7.2024578193%, 44.7735937531% .2739086307%, 54.7038211889% 5.2465231853%, 65.4509636322% 2.4471991693%, 72.5002507348% 11.0289141303%, 83.4571879873% 12.8429150833%, 86.4071170675% 23.5499976242%, 95.6806032369% 29.6640210704%, 94.0231005276% 40.645688223%);
+
+}
+/*bron van de clip-path is https://youtooz.com/*/
+
+
+.collectie {
+    position: relative;      /* nodig voor absolute children */
+    margin: 1em 1em;
+    background-color: red;
+}
+
+.collectie img {
+    width: 100%;
+    display: block;
+}
+
+.collectie h3 {
+    position: absolute;
+    bottom: 1em;          
+    left: 1em;
+    color: white;
+    font-size: 1.8em;
+    z-index: 10;
+}
+
+.collectie button {
+    position: absolute;
+    bottom: 0.5em;             
+    left: 1em;
+    padding: 1em 1.5em;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 1.5em;
+    font-size: 1em;
+    z-index: 10;
+}
+
+.collectie img:hover{
+    transform: scale(1.1);
+    transform-origin: bottom;
+}
+
+
+.upcoming ul {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;  
+    justify-content: center;
+    text-align: center;
+    gap: 4em;
+}
+
+.upcoming ul img{
+
+    background-color: #c5c3c3;
+    padding: 1em;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    height: 8em;           /* ← voeg toe */
+    object-fit: contain;   /* ← houdt proporties netjes */
+
+}
+
+.draak{
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5em;
+    width: 7em;
+    position: relative;
+}
+
+.draak p:first-of-type {
+    position: absolute;
+    bottom: 10em;
+    background-color: #acaaac;
+    padding: 0.6em 1em;
+    border-radius: 1em;
+    font-size: 0.8em;
+}
+
+.draak p:nth-of-type(2){
+    color: rgb(164, 162, 162);
+}
+
+.draak h3{
+    color: grey;
+    margin-top: -0.5em;
+    font-size: 1.3em;
+}
+
+.hoodie{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7em;
+    position: relative;
+}
+
+.hoodie p:first-of-type {
+    position: absolute;
+    bottom: 10em;
+    background-color: #acaaac;
+    padding: 0.6em 1em;
+    border-radius: 1em;
+    font-size: 0.8em;
+}
+
+.hoodie p:nth-of-type(2){
+    color: rgb(164, 162, 162);
+   
+}
+
+.hoodie h3{
+    color: grey;
+    margin-top: -0.5em;
+    font-size: 1.3em;
 }
 
 
-.ProductCard_media_badge_inner {
-    padding: 24px 20px 16px;
-    width: 4ch;
-    height: 4ch;
+.pastdrops ul {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;  
+    justify-content: center;
+    text-align: center;
+    gap: 4em;
+    
+}
+.pastdrops h3{
+    text-align: center;
+}
+
+.pastdrops ul img{
+
+    background-color: #c5c3c3;
+    padding: 1em;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    height: 8em;          
+  
+
+}
+
+.grunt{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7em;
+    position: relative;
+   
+}
+
+.grunt p:first-of-type {
+    position: absolute;
+    bottom: 6em;
+    background-color: #acaaac;
+    padding: 0.6em 1em;
+    border-radius: 1em;
+    font-size: 0.8em;
+}
+
+.grunt p:nth-of-type(2){
+    color: rgb(164, 162, 162);
+}
+
+.grunt h3{
+    color: grey;
+    margin-top: -0.5em;
+    font-size: 1.3em;
+}
+
+.hunter{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7em;
+    position: relative;
+}
+
+.hunter p:first-of-type {
+    position: absolute;
+    bottom: 6em;
+    background-color: #acaaac;
+    padding: 0.6em 1em;
+    border-radius: 1em;
+    font-size: 0.8em;
+}
+
+.hunter p:nth-of-type(2){
+    color: rgb(164, 162, 162);
+}
+
+
+.hunter h3{
+    color: grey;
+    margin-top: -0.5em;
+    font-size: 1.3em;
+}
+
+.internet{
+    background-color: #FE467C;
+    font-weight: 900;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -2em;
+}
+
+footer{
+    background-color: #FE467C;
+    
+}
+
+.socials h1{
+    text-align: center;
+    color: white;
+}
+.socials ul{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em ;
+    gap: 1em;
+}
+.socials ul li {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 2em; 
+    height: 2em; 
+    color: white;
+    font-size: 24px; /* grootte van het icoon */
+    cursor: pointer;
+    background-color: #ff4669; /* voor nu dezelfde kleur */
+}
+
+.facebook,.twitter,.instagram ,.tiktok,.reddit {
+   
+    background-color: #ff4669;
+}
+
+.tabel ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.tabel li {
+    display: flex;          
+    justify-content: space-between; 
+    padding: 4px 0;         
+}
+
+.tabel li p {
+    margin: 0;               
+}
+
+
+
+.thumbnails {
+    max-height: 20em;
+    overflow-y: auto;  
+    
+}
+
+.thumbnails ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.thumbnails li {
+    margin-bottom: 10px;
+    scroll-snap-align: start; 
+}
+
+.thumbnails img {
+    width: 80px;
+    display: block;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s;
+}
+
+.thumbnails img:hover {
+    border: 2px solid #333;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+
+.main-image img {
+    width: 130%; 
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+
+.plush {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.plush .label {
+    order: -1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #999;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: .2em;
+}
+
+
+.plush h1 {
+    font-size: 2em;
+    font-weight: 800;
+    color: #c383eb; 
+    margin: 0;
+}
+
+
+.plush .price {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-top: .3em;
+}
+
+
+.shop {
+    display: flex;
+    flex-direction: row;
+}
+
+.numberpicker{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    border-radius: 3em;
+   
+}
+.numberpicker p{
+    margin-left: 4em;
+}
+.pijl{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.shop, .numberpicker{
+    gap: 3em
+}
+.pijl {
+    display: flex;
+    flex-direction: column;  /* pijlen boven elkaar */
+    border-left: 1px solid #ccc;
+}
+
+.pijl button {
+    background: #f0f0f0;
+    border: none;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+    font-size: 0.8em;
+    line-height: 1;
+    transition: background 0.2s;
+}
+
+.pijl button:hover {
+    background: #ddd;
+}
+
+.shop > button {
+    margin-left: 1em;
+    background-color: #FE467C;
+    border-radius: 2em;
+    padding: 1em 2em;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.shop > button:hover {
+    background-color: #e03a6c;
+}
+
+/* child combinator van https://www.w3schools.com/cssref/sel_element_gt.php*/ 
+
+
+
+.preorder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2em;
+}
+.preorder h2{
+    font-size: 1em;
+    margin-bottom: -2em;
+}
+
+.preorder p {
+color: #e03a6c;
+font-weight: bold;
+font-size: 2em;
+}
+
+.preorder button{
+    background-color: black;
+    color: whitesmoke;
+    padding: 1em 2em;
+    border-radius: 2em;
+    margin-top: -1em;
+    font-size: 1em;
+}
+.ships{
+    margin-top: 2em;
+}
+.ships ul{
+    margin: 0 -3em 2em;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--heading-fontFamily);
-    font-weight: 400;
-    line-height: 1em;
-    font-size: 26px;
-    letter-spacing: .05ch;
+    background: #ff467f;
+    background-image: linear-gradient(180deg, #0000 calc(50% - 1px), #00000026 50%, #0000 calc(50% + 1px)), linear-gradient(to right, #ff467f, #ff4669 94%);
+}
+
+
+.ships li p{
+   font-weight: bold;
+   color: white;
+}
+
+.info ul{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    color: var(--media-bg);
-    background: var(--heading-bg-default, #FF467F linear-gradient(to right, #FF467F 0%, #FF4669 94%));
-    transform: rotate(-21deg) scale(var(--media-scale));
-    transition: transform .2s;
-    clip-path: polygon(100% 50%, 94.016642033% 59.3560260868%, 95.6772728821% 70.3368321538%, 86.4057647469% 76.4503363532%, 83.4565303179% 87.1572412739%, 72.5% 88.9711431703%, 65.4508497187% 97.5528258148%, 54.703780847% 94.7534852916%, 44.7735768366% 99.7260947684%, 36.0942352531% 92.7975432333%, 25% 93.3012701892%, 19.8891227139% 83.4415171465%, 9.5491502813% 79.3892626146%, 8.8904544062% 68.3031489384%, 1.0926199641% 60.395584541%, 5.0000000034% 50.0000000005%, 1.0926199789% 39.6044154614%, 8.8904544593% 31.6968510698%, 9.5491504885% 20.6107374194%, 19.8891233248% 16.5584829594%, 25.0000020917% 6.6987301927%, 36.0942407425% 7.2024578193%, 44.7735937531% .2739086307%, 54.7038211889% 5.2465231853%, 65.4509636322% 2.4471991693%, 72.5002507348% 11.0289141303%, 83.4571879873% 12.8429150833%, 86.4071170675% 23.5499976242%, 95.6806032369% 29.6640210704%, 94.0231005276% 40.645688223%);
+    margin-top: 2em;
+    color: #ef92ae;
+    font-weight: bold;
+    gap:2em
 }
