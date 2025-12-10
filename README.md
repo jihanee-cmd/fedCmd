@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauw
 
   #### Je focus:
-  allebei
+  surface plane
  
 </details>
 
@@ -57,7 +57,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-  MIjn grootste bevinding is dat mijn hele website bestaat uit divjes.
+  MIjn grootste bevinding is dat mijn hele website bestaat uit divjes.Mijn hele website is ook erg moeilijk veel code is geschreven op een hele moeilijke manier. verder is het zeker niet semantisch. 
+  
    <img src="readme-images/test1.jpg" width="375px" alt="bestaan uit allemaal divjes">
     <img src="readme-images/test2.jpg" width="375px" alt="bestaan uit allemaal divjes">
      <img src="readme-images/test3.jpg" width="375px" alt="bestaan uit allemaal divjes">
@@ -95,26 +96,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  ik was nog niet begonnen met het coderen. MIjn feedback kreeg ik vooral op mijn breakdown schets. articals hoeven niet in sections. 
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Moet duidelijkere sections 
+  - moet beginnen aan de code
+
 
 </details>
 
@@ -128,26 +121,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  ik ben pas begonnen met de code. ik heb de header en het begin stuk af maar het gehele html is nog niet compleet. 
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - meer verdiepen in de oprachten zodat flex box goed werkt
+  - verder gaan met de html
 
 </details>
 
@@ -161,7 +146,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Mijn website is veel semantischer dan de orginele website. ik heb veel meer betere code geschreven. Ook makkelijkere code die makkelijker is dat die van de orginele website. ik heb amper divjes gerbuikt terwijl de orginele website er alleen maar heeft. 
 
 </details>
 
@@ -175,17 +160,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
@@ -236,8 +213,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1.  /* bron: chatgpt prompt "maak een afteller""*/ 
+  2. /*bron chatgpt ik vroeg voor een bounce effect*/
+  3. /* chatgpt hoe zorg ervooor dat de afbeeldingen die ik heb reageren op de klik en groot ernaast komen*/
+  4. light dark mode /*bron: uit dlo*/
+  5. 
 
 </details>
