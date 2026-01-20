@@ -183,13 +183,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  Dit is mijn herkansings gesprek en dit is mijn uiteindelijke werk.
+  <img src="readme-images/youtoozpagina1.png" width="375px" alt="uitomst pagina 1">
+  dit is uiteindelijk mijn tweede pagina geworden
+   <img src="readme-images/youtoozpagina2.png" width="375px" alt="uitomst pagina 2">
+  
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  het ging erg goed om flexboc te gebruiken. best veel dingen zijn responsive ookal heb ik gekozen voor surface plane. verder vond ik dat de css erg goed ging.
+  ik kon snel typen hoe ik iets wilde omdat ik het erg goed begreep.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  
 
 
   ### Dit was lastig/Is niet gelukt:
