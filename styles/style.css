@@ -5,8 +5,6 @@
     font-family: 'Luckiest Guy', Helvetica, system-ui, sans-serif;;
 }
 
-
-
 body {
   background: var(--bg);
   color: var(--clr);
@@ -52,13 +50,15 @@ footer {
 
 /*bron: uit dlo*/
 
-
+/* --------------------------
+   Algemeen menu
+--------------------------- */
 header nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;  /* <-- duwt logo links, buttons rechts */
+    justify-content: space-between;  /* logo links, buttons rechts */
     padding: 0;
     margin: 0;
 }
@@ -68,10 +68,13 @@ header li {
 }
 
 header li:nth-child(2) {
-     margin-left: auto; 
+    margin-left: auto; /* duwt search button naar rechts */
 }
 
-header li button {
+/* --------------------------
+   Search button
+--------------------------- */
+.search-button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -79,7 +82,109 @@ header li button {
     background-color: #FE467C;
     color: white;
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
+
+.search-button svg {
+    width: 60%;
+    height: 60%;
+}
+
+/* ========== HAMBURGER KNOP ========== */
+.hamburger-streepjes{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #FE467C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* streepjes */
+.hamburger-streepjes span {
+  display: block;
+  width: 20px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  margin: 3px 0;
+  transition: 0.3s ease;
+}
+
+/* ========== HAMBURGER MENU ========== */
+.hamburger-menu {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #FE467C;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  z-index: 1000;
+}
+
+/* open toestand (JS toggle) */
+.hamburger-menu.open {
+  max-height: 300px;
+}
+
+/* menu links */
+.hamburger-menu li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hamburger-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+ 
+/* Zorg dat de spans mooi draaien vanuit het midden */
+.hamburger-streepjes span {
+  transform-origin: center;
+}
+
+/* ========== ANIMATIE: HAMBURGER -> KRUIS ========== */
+
+/* optioneel: hele knop een klein beetje draaien net als je voorbeeld */
+.hamburger-streepjes.is-active {
+  transition: transform 0.3s ease-in-out;
+  transition-delay: 0.1s;
+  transform: rotate(45deg);
+}
+
+/* middelste streepje verdwijnt */
+.hamburger-streepjes.is-active span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+/* bovenste streepje naar beneden */
+.hamburger-streepjes.is-active span:nth-child(1) {
+  transform: translateY(10px) ;
+}
+
+/* onderste streepje naar boven + 90 graden draaien */
+.hamburger-streepjes.is-active span:nth-child(3) {
+  transform: translateY(-10px) rotate(90deg);
+}
+
+/*bron https://creocodigo.blogspot.com/2021/04/hamburger-animation-using-css.html */
+
 
 section img {
     align-items: center;
@@ -136,13 +241,14 @@ h2{
 
 
 .strangerthings {
-    background-color: red;
-    position: relative;        /* nodig om h3 binnen dit element te positioneren */
+    background-image: url("../images/rodeachtergrond.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;      
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    
 }
 
 .strangerthings h3 {
@@ -315,98 +421,79 @@ header li button{
 }
 
 
+.community {
+  background-color: #FE467C;
+  margin: 2em;
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+ clip-path: polygon(
+  0 5%,      /* linksboven iets naar beneden (minder diep) */
+  100% 0%,   /* rechtsboven helemaal boven */
+  100% 95%,  /* rechtsonder iets omhoog */
+  0 100%     /* linkeronder normaal */
+);
+}
+
+/* ===== TEKST ===== */
+.community h2 {
+  color: aliceblue;
+  font-size: 3em;
+  font-weight: 300;
+  text-align: left;
+  margin: 0;
+}
+
+.community p {
+  color: aliceblue;
+  max-width: 40em;
+  margin: 0;
+  text-align: left;
+}
+
+/* ===== BUTTON ===== */
+.community button {
+  margin-top: 1em;
+  background-color: black;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 1em;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* ===== CARROUSEL ===== */
 .communitycourrasel {
-    overflow: hidden;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    background-color: #FE467C;
-    margin: 2em 2em;
-    margin-top: -3em;
-    padding: 3em 0;   /* hoogte toevoegen */
-   
-    clip-path: polygon(
-        0 0%,
-        100% 0%,
-        100% 90%,
-        0 100%
-    );
+  overflow-x: hidden;
+  margin-top: 2em;
 }
 
 .communitycourrasel ul {
-      list-style: none;
-    display: flex;
-    gap: 3em;
-    animation: bannermove 20s linear infinite;
+  list-style: none;
+  display: flex;
+  gap: 3em;
+  padding: 0;
+  margin: 0;
+  animation: bannermove 5s linear infinite;
 }
 
-.communitycourrasel ul img {
-       width: 15em;
-    border-radius: 1em;
-    display: block;  
-    opacity: 1;     
-    transform: translateY(0); 
+/* ===== AFBEELDINGEN ===== */
+.communitycourrasel img {
+  width: 15em;
+  border-radius: 1em;
+  display: block;
 }
 
 @keyframes bannermove {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Bounce animatie zodra de img zichtbaar wordt */
-
-.communitycourrasel img.show {
-    opacity: 1;
-    transform: translateY(0);
-    animation: bounceIn 0.8s ease-out;
-}
-
-@keyframes bounceIn {
-    0%   { transform: translateY(40px); }
-    40%  { transform: translateY(-20px); }
-    65%  { transform: translateY(10px); }
-    85%  { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
-}
-/* bounce animatie van chat gpt*/
-
-.community h2{
- color: aliceblue;
- font-size: 3em;
- font-weight: 300;
- text-align: left;
-}
-.community p{
-    color: aliceblue;
-    margin-top: -1em;
-    text-align: left;
-    
-}
-.community button{
-    margin-top: 2em;
-    background-color: black;
-    color: white;
-    padding: 1em 2em;
-    border-radius: 1em;
-}
-
-.community {
-    background-color: #FE467C;
-    margin: 2em 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding:1em;
-     clip-path: polygon(
-        0 10%,    /* linkerbovenpunt 10% naar beneden */
-        100% 0%,  /* rechterbovenpunt helemaal boven */
-        100% 100%, /* rechteronderpunt normaal */
-        0 100%     /* linkeronderpunt normaal */
-    );
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 /*bron chatgpt voor de clip-path*/
 
@@ -752,8 +839,8 @@ header li button{
 }
 
 footer{
-    background-color: #FE467C;
-    
+    background-color: #FF4672;
+     padding: 3rem 0 5rem;
 }
 
 .socials h1{
@@ -767,6 +854,7 @@ footer{
     font-size: 1em ;
     gap: 1em;
 }
+
 .socials ul li {
     display: flex; 
     align-items: center; 
@@ -776,29 +864,40 @@ footer{
     color: white;
     font-size: 24px; /* grootte van het icoon */
     cursor: pointer;
-    background-color: #ff4669; /* voor nu dezelfde kleur */
+    background-color: #FF819D;; /* voor nu dezelfde kleur */
+    
 }
 
 .facebook,.twitter,.instagram ,.tiktok,.reddit {
-   
     background-color: #ff4669;
 }
 
+
 .tabel ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style: none; 
-    padding: 0;
-    margin: 0;
+    padding: 1em;
+    margin: auto;
+    
+    
 }
+
 
 .tabel li {
     display: flex;          
-    justify-content: space-between; 
-    padding: 4px 0;         
+    justify-content: space-between;
+    border: 0.1em solid #e5e5e5;   
+    padding: 0.5em;
+    align-items: center;
 }
 
+
 .tabel li p {
-    margin: 0;               
+    margin: 0 1em;       
 }
+
 
 
 
@@ -807,6 +906,7 @@ footer{
     overflow-y: auto;  
     
 }
+
 
 .thumbnails ul {
     list-style: none;
@@ -838,12 +938,13 @@ footer{
 }
 
 
-.main-image img {
-    width: 130%; 
-    height: auto;
-    display: block;
-    border: 1px solid #ccc;
+.main-image img{
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  margin-top: 4em;
 }
+
 
 
 .plush {
@@ -881,33 +982,39 @@ footer{
 .shop {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 4em;
 }
 
-.numberpicker{
+/* numberpicker + pijlen samen */
+.numberpicker {
     display: flex;
     flex-direction: row;
     gap: 1em;
+    align-items: center;
+
+    border: 2px solid #ccc;
     border-radius: 3em;
-   
-}
-.numberpicker p{
-    margin-left: 4em;
-}
-.pijl{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
+    padding: 0.5em 1.5em;
 }
 
-.shop, .numberpicker{
-    gap: 3em
+/* getal */
+.numberpicker p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
 }
+
+/* pijlen */
 .pijl {
     display: flex;
-    flex-direction: column;  /* pijlen boven elkaar */
+    flex-direction: column;
+    gap: 0.3em;
     border-left: 1px solid #ccc;
+    padding-left: 0.8em;
 }
 
+/* pijl knoppen */
 .pijl button {
     background: #f0f0f0;
     border: none;
@@ -922,14 +1029,15 @@ footer{
     background: #ddd;
 }
 
+/* add to cart knop */
 .shop > button {
-    margin-left: 1em;
     background-color: #FE467C;
     border-radius: 2em;
-    padding: 1em 2em;
+    padding: 1.5em 2em;
     color: white;
     border: none;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .shop > button:hover {
@@ -939,43 +1047,74 @@ footer{
 /* child combinator van https://www.w3schools.com/cssref/sel_element_gt.php*/ 
 
 
-
 .preorder{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-    margin-top: 2em;
+  border: 1px solid #e5e5e5;
+  padding: 1.2em 1.5em;      /* compacter */
+  margin-top: 2em;
+
+  width: 100%;
+  max-width: 520px;          /* zorgt dat het er net uit ziet */
+  box-sizing: border-box;
 }
+
 .preorder h2{
-    font-size: 1em;
-    margin-bottom: -2em;
+  font-size: 1em;
+  font-weight: 1000;
+  letter-spacing: 0.04em;
+  margin-top: 0.5em;
 }
 
-.preorder p {
-color: #e03a6c;
-font-weight: bold;
-font-size: 2em;
+.preorder p{
+  margin: 0;
+  color: #FE467C;
+  font-weight: 900;
+  font-size: 1.7em;          
+  line-height: 1;
+  white-space: nowrap;  
+  margin-bottom: 2em;    
 }
 
+/* knop zoals rechts (pijltjes links/rechts) */
 .preorder button{
-    background-color: black;
-    color: whitesmoke;
-    padding: 1em 2em;
-    border-radius: 2em;
-    margin-top: -1em;
-    font-size: 1em;
+    position: absolute;
+    top: 9.2em;
+  margin-top: 1em;           /* dichterbij */
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  padding: 0.9em 2.7em;
+  border-radius: 2em;
+  font-size: 1em;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  gap: 0.9em; 
+
 }
+
+
 .ships{
-    margin-top: 2em;
+    margin-top: 4em;
+    margin-bottom: 1em;
 }
-.ships ul{
-    margin: 0 -3em 2em;
-    padding: 20px;
+
+.ships ul {
+    margin: 0; /* of een kleine positieve waarde indien nodig */
+    padding: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ff467f;
+    gap:1em;
     background-image: linear-gradient(180deg, #0000 calc(50% - 1px), #00000026 50%, #0000 calc(50% + 1px)), linear-gradient(to right, #ff467f, #ff4669 94%);
 }
 
@@ -983,6 +1122,7 @@ font-size: 2em;
 .ships li p{
    font-weight: bold;
    color: white;
+
 }
 
 .info ul{
@@ -993,4 +1133,85 @@ font-size: 2em;
     color: #ef92ae;
     font-weight: bold;
     gap:2em
+}
+
+
+footer h2{
+    text-align: center;
+    font-size: 3em;
+    font-weight: 1000;
+    color: white;
+}
+
+/* UL met contact / shipping / track */
+footer > ul:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 2rem auto;
+    clip-path: polygon(
+    5% 0%,    /* linksboven schuin */
+    100% 0%,  
+    95% 100%, /* rechtsonder schuin */
+    0% 100%
+  );
+}
+
+/* De blokjes zelf */
+footer > ul:first-of-type li {
+  background-color: #FF819D;
+  width: 280px;          
+  padding: 1rem;
+  text-align: center;
+  list-style: none;
+  color: white;
+  font-weight: 1000;
+    clip-path: polygon(
+    5% 0%,    /* linksboven schuin */
+    100% 0%,  
+    95% 100%, /* rechtsonder schuin */
+    0% 100%
+  );
+
+}
+
+footer > ul:nth-of-type(2) {
+     display: flex;
+     flex-direction: column;
+     gap: 0.75rem;
+     list-style: none;
+     text-align: center;
+}
+
+footer > ul:nth-of-type(2) li {
+  margin: 0.5rem 0;
+  color: #FFBCC9;
+  font-weight: 800;
+  gap: 2em;
+}
+
+header.button {
+  position: relative;   /* nodig voor absolute positioning */
+  height: 1em;         /* voorbeeldhoogte, pas aan indien nodig */
+}
+
+.button button {
+  position: absolute;
+  right: 1rem;           
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 1.5em;      /* X groot maken */
+  font-weight: bold;
+
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.beschrijving h2{
+ font-weight: 1000;
+ text-align: left;
 }

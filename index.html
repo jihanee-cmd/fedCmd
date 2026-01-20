@@ -1,207 +1,241 @@
 <!DOCTYPE html>
-<html lang="nl">
-	
-<head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Howdy FED2526</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="jouw naam">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="styles/style.css" rel="stylesheet">
+    <title>Youtooz</title>
 
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
 
-</head> 
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <!-- Logo -->
+          <li>
+            <img src="images/youtoozlogo.png" alt="youtooz logo">
+          </li>
 
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><img src="images/youtoozlogo.png" alt="youtooz logo"/> </li>
-				<li><button><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 410.587 410.588" xml:space="preserve" fill="#ffffff" stroke="#ffffff" width="50%"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#ffffff;" d="M410.587,371.351l-50.044-50.044l-39.866-39.866c20.505-28.842,32.685-63.996,32.685-102.009 c0-97.424-79.263-176.687-176.684-176.687C79.251,2.745,0,82.008,0,179.432c0,97.423,79.251,176.675,176.678,176.675 c40.698,0,78.116-13.963,108.01-37.167l68.508,68.508c0.841,0.841,1.784,1.509,2.705,2.207l18.194,18.188L410.587,371.351z M176.689,314.548c-74.503-0.006-135.111-60.622-135.111-135.111c0-74.5,60.614-135.108,135.111-135.108 c74.498,0,135.108,60.608,135.108,135.108c0,30.998-10.59,59.507-28.218,82.333c-5.833,7.537-12.374,14.49-19.642,20.654 C240.374,302.409,209.94,314.548,176.689,314.548z"></path> </g> </g></svg></button></li>
-				<li><button>☰</button></li>
-			</ul>
-		</nav>
+          <!-- Search button -->
+          <li>
+            <button class="search-button" type="button">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 410.587 410.588"
+                xml:space="preserve" fill="#ffffff" stroke="#ffffff" width="50%">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path style="fill:#ffffff;" d="M410.587,371.351l-50.044-50.044l-39.866-39.866c20.505-28.842,32.685-63.996,32.685-102.009 
+                      c0-97.424-79.263-176.687-176.684-176.687C79.251,2.745,0,82.008,0,179.432c0,97.423,79.251,176.675,176.678,176.675 
+                      c40.698,0,78.116-13.963,108.01-37.167l68.508,68.508c0.841,0.841,1.784,1.509,2.705,2.207l18.194,18.188L410.587,371.351z 
+                      M176.689,314.548c-74.503-0.006-135.111-60.622-135.111-135.111c0-74.5,60.614-135.108,135.111-135.108 
+                      c74.498,0,135.108,60.608,135.108,135.108c0,30.998-10.59,59.507-28.218,82.333c-5.833,7.537-12.374,14.49-19.642,20.654 
+                      C240.374,302.409,209.94,314.548,176.689,314.548z"></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </li>
 
-		</header>
-		<main>
-			<section class="timeline">
-                <p id="countdown"></p>
-				<h1 hidden> youtooz begin pagina</h1>
-				<button>
-					black friday 
-				</button>
-			</section>
+          <!-- Hamburger -->
+          <li>
+            <button class="hamburger-streepjes" id="hamburgerBtn" aria-label="Menu" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
 
-            <h2 hidden> populaire nieuwe items</h2>
-			
-		<section>
-			<ul>
-			<li class="strangerthings"> 
-                <h3>Stranger Things</h3>
-                <img src="images/strangertings.png" alt="foto van de strangerthings banner"/>
-				<button> buy -> </button>
-            </li>
+            <ul class="hamburger-menu" id="hamburgerMenu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-            <li class="aradir">
-                <h3>Aradir</h3>
-                <img src="images/aradir.png" alt="foto van de aradir banner"/>
-				<button> buy -> </button>
-			</li>
+    <main>
+      <section class="timeline">
+        <p id="countdown"></p>
+        <h1 hidden>youtooz begin pagina</h1>
+        <button type="button">black friday</button>
+      </section>
 
-            <li class="peak">
-                <h3>Peak</h3>
-                <img src="images/peak.webp" alt="foto van de peak banner"/>
-				<button> buy -> </button>
-            
-				</li>
-			</ul>
-		</section>
-		<div class="carrousel">
-          <ul>
-        <li><img src="images/apex.png" alt="foto van de apex banner"/></li>
-        <li><img src="images/callofduty.png" alt="foto van de callofduty banner"/></li>
-        <li><img src="images/hazbinhotel.png" alt="foto van de hazbinhotel banner"/></li>
-        <li><img src="images/minecraft.png" alt="foto van de minecraft banner"/></li>
-        <li><img src="images/playstation.png" alt="foto van de playstation banner"/></li>
-        <li><img src="images/skylanders.png" alt="foto van de skylander banner"/></li>
-        <li><img src="images/worldofclash.png" alt="foto van de worldofclash banner"/></li>
-         </ul>
-     </div>
+      <h2 hidden>populaire nieuwe items</h2>
 
-		
-<section class="livenow">
-	<h2 class="spinning"> Live now! </h2> 
-    <ul>
-        <li class="otsukaray"> 
+      <section>
+        <ul>
+          <li class="strangerthings">
+            <h3>Stranger Things</h3>
+            <img src="images/strangertings.png" alt="foto van de strangerthings banner">
+            <button type="button">buy -&gt;</button>
+          </li>
+
+          <li class="aradir">
+            <h3>Aradir</h3>
+            <img src="images/aradir.png" alt="foto van de aradir banner">
+            <button type="button">buy -&gt;</button>
+          </li>
+
+          <li class="peak">
+            <h3>Peak</h3>
+            <img src="images/peak.webp" alt="foto van de peak banner">
+            <button type="button">buy -&gt;</button>
+          </li>
+        </ul>
+      </section>
+
+      <div class="carrousel">
+        <ul>
+          <li><img src="images/apex.png" alt="foto van de apex banner"></li>
+          <li><img src="images/callofduty.png" alt="foto van de callofduty banner"></li>
+          <li><img src="images/hazbinhotel.png" alt="foto van de hazbinhotel banner"></li>
+          <li><img src="images/minecraft.png" alt="foto van de minecraft banner"></li>
+          <li><img src="images/playstation.png" alt="foto van de playstation banner"></li>
+          <li><img src="images/skylanders.png" alt="foto van de skylander banner"></li>
+          <li><img src="images/worldofclash.png" alt="foto van de worldofclash banner"></li>
+        </ul>
+      </div>
+
+      <section class="livenow">
+        <h2 class="spinning">Live now!</h2>
+        <ul>
+          <li class="otsukaray">
             <a href="shop.html">
-                <img src="images/otsukarayplush.webp" alt="otsukaray plush">
+              <img src="images/otsukarayplush.webp" alt="otsukaray plush">
             </a>
             <p>Gone in 25d</p>
             <p>plush</p>
             <h3>otsuka ray plush (9in)</h3>
             <p>$29.99 USD</p>
             <p class="negenicoon">9</p>
-        </li>
+          </li>
 
-        <li class="wiggly"> 
+          <li class="wiggly">
             <img src="images/wigglyplush.webp" alt="wiggly plush">
             <p>Gone in 25d</p>
             <p>plush</p>
             <h3>wiggly plush (9in)</h3>
             <p>$29.99 USD</p>
             <p class="negenicoon">9</p>
-        </li>
-    </ul>
-</section>
+          </li>
+        </ul>
+      </section>
 
+      <section class="blackfridaydeal">
+        <h2 hidden>Black friday deal</h2>
+        <img src="images/blackfridaydeal.png" alt="spend $75 or more get $19 off spend $185 or more get $55 off spend $325 or more get $110 off">
+      </section>
 
-		<section class="blackfridaydeal">
-			<h2 hidden > Black friday deal</h2>
-			<img src="images/blackfridaydeal.png" alt="spend $75 or more get $19 off spend $185 or more get $55 off spend $325 or more get $110 off">
-		</section>
+      <div class="community">
+        <h2>Community designs</h2>
+        <p>
+          Vote on design ideas for us to bring to life as Youtooz
+          from artists in our community
+        </p>
+        <button type="button">View All</button>
 
-		<section class="community">
-			<h2> Community designs</h2>
-			<p> Vote on design ideas for us to 
-				bring to life as Youtooz from artists in our 
-				community </p>
-			<button> View All</button>
-			</section>
-			<div class="communitycourrasel">
-				<ul>
-					<li><img src="images/tod.png" alt=""></li>
-					<li><img src="images/todd.png" alt=""></li>
-					<li><img src="images/spooky.png" alt=""></li>
-					<li><img src="images/icecream.png" alt=""></li>
-					<li><img src="images/icey.png" alt=""></li>
-					<li><img src="images/daily.png" alt=""></li>
-				</ul>
-			</div>
-	     	<article class="collectie">
-				<h2 hidden> collecties </h2>
-	             <img src="images/hazbinhoteldolcollectie.webp" alt="link naar de hazbin hotel poppen collectie">
-                <h3>hazbin hotel collectie</h3>
-				<button>shop collectie -> </button>
-			</article>
+        <div class="communitycourrasel">
+          <ul>
+            <li><img src="images/tod.png" alt=""></li>
+            <li><img src="images/todd.png" alt=""></li>
+            <li><img src="images/spooky.png" alt=""></li>
+            <li><img src="images/icecream.png" alt=""></li>
+            <li><img src="images/icey.png" alt=""></li>
+            <li><img src="images/daily.png" alt=""></li>
+          </ul>
+        </div>
+      </div>
 
-			<section class="upcoming">
-			<h2>Upcoming drops</h2>
-	
-				<ul>
-				<li class="draak"> 
-					<img src="images/draak.webp" alt="draak plush ">
-					<p id="countdown2"></p>
-					<p> plush </p>
-					<h3>burning godzilla toy</h3>
-				</li>
+      <article class="collectie">
+        <h2 hidden>collecties</h2>
+        <img src="images/hazbinhoteldolcollectie.webp" alt="link naar de hazbin hotel poppen collectie">
+        <h3>hazbin hotel collectie</h3>
+        <button type="button">shop collectie -&gt;</button>
+      </article>
 
-				<li class="hoodie"> 
-					<img src="images/blauwhoodie.webp" alt="raxxanterax plush">
-					<p id="countdown3"></p>
-					<p> plush </p>
-					<h3>raxxanterax plush(9in)</h3>
-					
-				</li>
-				</ul>
-		    </section>
-			<section class="pastdrops">
-			<h2>Past drops</h2>
-			<h3> Gone forever! </h3>
-				<ul>
-				<li class="grunt"> 
-					<img src="images/grunt.webp" alt="grunt plush die weg is voor altijd">
-					<p> Sold out! </p>
-					<p> plush </p>
-					<h3>grunt</h3>
-				</li>
-				<li class="hunter"> 
-					<img src="images/hunter.webp" alt="hunter plush die weg is voor altijd">
-					<p> sold out! </p>
-					<p> plush </p>
-					<h3>hunter</h3>
-				</li>
-				</ul>
-		    </section>
-	<section class="internet">
-       <h2>Youtooz on the internet</h2>
-        <img src="images/carson.png" alt="Post van Carson"> 
-    </section>
-   </main> 
-	
-<footer>
-	
-	
-<section class="socials">
-	<h1>youtooz</h1>
-    <ul>
-        <li class="facebook"><i class="fa-brands fa-facebook-f"></i></li>
-        <li class="twitter"><i class="fa-brands fa-x-twitter"></i></li>
-        <li class="instagram"><i class="fa-brands fa-instagram"></i></li>
-        <li class="reddit"><i class="fa-brands fa-reddit"></i></li>
-        <li class="tiktok"><i class="fa-brands fa-tiktok"></i></li>
-		<!-- bronnen chatgpt voor de iconen " -->
-    </ul>
-</section>
+      <section class="upcoming">
+        <h2>Upcoming drops</h2>
+        <ul>
+          <li class="draak">
+            <img src="images/draak.webp" alt="draak plush">
+            <p id="countdown2"></p>
+            <p>plush</p>
+            <h3>burning godzilla toy</h3>
+          </li>
 
+          <li class="hoodie">
+            <img src="images/blauwhoodie.webp" alt="raxxanterax plush">
+            <p id="countdown3"></p>
+            <p>plush</p>
+            <h3>raxxanterax plush(9in)</h3>
+          </li>
+        </ul>
+      </section>
 
+      <section class="pastdrops">
+        <h2>Past drops</h2>
+        <h3>Gone forever!</h3>
+        <ul>
+          <li class="grunt">
+            <img src="images/grunt.webp" alt="grunt plush die weg is voor altijd">
+            <p>Sold out!</p>
+            <p>plush</p>
+            <h3>grunt</h3>
+          </li>
 
-</footer>
-<section class="info">
-	    <ul>
-          <li>FAQ</li>
-         <li> About</li> 
-		 <li> Terms</li>
-         <li> Privacy</li>
-        <li> Contact Us </li>
-        <li> How It's Made </li>
-          <li> Find My Youtooz</li>
-	</ul>
-</section>
+          <li class="hunter">
+            <img src="images/hunter.webp" alt="hunter plush die weg is voor altijd">
+            <p>sold out!</p>
+            <p>plush</p>
+            <h3>hunter</h3>
+          </li>
+        </ul>
+      </section>
 
-	<script defer src="scripts/script.js"></script>
-</body>
-	
+      <section class="internet">
+        <h2>Youtooz on the internet</h2>
+        <img src="images/carson.png" alt="Post van Carson">
+      </section>
+    </main>
+
+    <footer>
+      <section class="socials">
+        <h2>youtooz</h2>
+        <ul>
+          <li class="facebook"><i class="fa-brands fa-facebook-f"></i></li>
+          <li class="twitter"><i class="fa-brands fa-x-twitter"></i></li>
+          <li class="instagram"><i class="fa-brands fa-instagram"></i></li>
+          <li class="reddit"><i class="fa-brands fa-reddit"></i></li>
+          <li class="tiktok"><i class="fa-brands fa-tiktok"></i></li>
+          <!-- bronnen chatgpt voor de iconen -->
+        </ul>
+      </section>
+
+      <ul>
+        <li>contact us</li>
+        <li>sipping policy</li>
+        <li>track my order</li>
+      </ul>
+
+      <ul>
+        <li>FAQ</li>
+        <li>About</li>
+        <li>Terms</li>
+        <li>Privacy</li>
+        <li>Contact Us</li>
+        <li>How It's Made</li>
+        <li>Find My Youtooz</li>
+      </ul>
+    </footer>
+
+    <script defer src="scripts/script.js"></script>
+  </body>
 </html>

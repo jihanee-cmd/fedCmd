@@ -1,5 +1,5 @@
 // JavaScript Document
-const eindDatum = new Date("Dec 20, 2025 23:59:59").getTime();
+const eindDatum = new Date("Dec 23, 2026 23:59:59").getTime();
 
 function updateCountdown(elementId, endTime) {
     const nu = new Date().getTime();
@@ -35,3 +35,12 @@ function showImage(thumbnail) {
 }
 
 /* chatgpt hoe zorg ervooor dat de afbeeldingen die ik heb reageren op de klik en groot ernaast komen*/
+
+
+  const btn = document.getElementById("hamburgerBtn");
+  const menu = document.getElementById("hamburgerMenu");
+
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("is-active");   // animatie (streepjes -> kruis)
+    menu.classList.toggle("open");       // menu open/dicht
+  });
