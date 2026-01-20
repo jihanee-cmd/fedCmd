@@ -197,9 +197,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  ik heb erg veel gedaan aan surface plane. het lastigste vond ik toch wel het hamburger menu. 
+  ik moest heel vaak verschillende maniern proberen. ook vond ik het lastig om javascript goed toe te passen en te snappen. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  
 </details>
 
 
