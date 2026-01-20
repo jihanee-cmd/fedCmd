@@ -4,6 +4,13 @@
 *{
     font-family: 'Luckiest Guy', Helvetica, system-ui, sans-serif;;
 }
+:root{
+  --base-font-size: 16px;
+}
+
+body{
+  font-size: var(--base-font-size);
+}
 
 body {
   background: var(--bg);
@@ -91,6 +98,22 @@ header li:nth-child(2) {
 .search-button svg {
     width: 60%;
     height: 60%;
+}
+/* text grote*/
+.font-controls{
+  display: flex;
+  gap: .5em;
+}
+
+.font-controls button{
+  background: #FE467C;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* ========== HAMBURGER KNOP ========== */
@@ -186,6 +209,75 @@ header li:nth-child(2) {
 /*bron https://creocodigo.blogspot.com/2021/04/hamburger-animation-using-css.html */
 
 
+
+/* Popup paneel */
+.hamburger-popup{
+  position: fixed;
+  top: 3.4em;            /* hoogte van je header (pas aan!) */
+  margin-left: 8em;
+  overflow: auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.25);
+  padding: 18px;
+  z-index: 4000;
+}
+
+/* Cards */
+.menu-cards{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  display: grid;
+  gap: 12px;
+}
+
+.menu-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  padding: 18px;
+  border-radius: 12px;
+  background: #fde8ee;
+  text-decoration: none;
+  color: #111;
+  font-weight: 900;
+}
+
+.menu-card i{
+  font-size: 22px;
+  color: #FE467C;
+}
+
+/* Links */
+.menu-links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  text-align: center;
+}
+
+.menu-links a{
+  text-decoration: none;
+  font-weight: 900;
+  color: #FE467C;
+}
+
+.menu-links.muted{
+  margin-top: 24px;
+  text-align: center;
+}
+
+.menu-links.muted a{
+  color: #9aa0a6;
+  font-weight: 800;
+  
+}
+
 section img {
     align-items: center;
     width: 100%;     /* past de foto aan de breedte van het scherm aan */
@@ -206,7 +298,7 @@ section li {
 }
 
 .timeline {
-     background: linear-gradient(90deg, #1b1b1b , #4f4f4f);
+    background-image: url("../images/zwartebalk.png");
     display: flex;
     align-items: center;
     padding: 0;
@@ -284,7 +376,7 @@ h2{
 }
 
 .aradir {
-    background-color: blue;
+    background-image: url("../images/blauweachtergrond.png");
     position: relative;        /* nodig om h3 binnen dit element te positioneren */
     display: flex;
     flex-direction: column;
@@ -326,7 +418,7 @@ h2{
 }
 
 .peak {
-    background-color: green;
+    background-image: url("../images/groeneachtergrond.png");
     position: relative;        /* nodig om h3 binnen dit element te positioneren */
     display: flex;
     flex-direction: column;
@@ -634,7 +726,7 @@ header li button{
 .collectie {
     position: relative;      /* nodig voor absolute children */
     margin: 1em 1em;
-    background-color: red;
+     background-image: url("../images/kleinerodeachtergrond.png");
 }
 
 .collectie img {
@@ -1214,4 +1306,73 @@ header.button {
 .beschrijving h2{
  font-weight: 1000;
  text-align: left;
+}
+
+
+#addToCart.loading{
+  cursor: wait;
+  opacity: .7;
+}
+
+#addToCart.loading::after{
+  content: "";
+  width: 1em;
+  height: 1em;
+  margin-left: .5em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin .8s linear infinite;
+}
+
+@keyframes spin{
+  to { transform: rotate(360deg); }
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #FE467C;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: white;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 90%;
+  padding: 1em;
+  border-radius: 4px;
+  border: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #222;
+}
+
+.footer p{
+    text-align: center;
+
 }

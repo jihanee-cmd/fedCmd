@@ -13,17 +13,20 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <ul>
-          <!-- Logo -->
-          <li>
-            <img src="images/youtoozlogo.png" alt="youtooz logo">
-          </li>
+ <header>
+  <nav>
+    <ul>
+      <li>
+        <img src="images/youtoozlogo.png" alt="youtooz logo">
+      </li>
 
-          <!-- Search button -->
-          <li>
-            <button class="search-button" type="button">
+    <div class="font-controls">
+        <button type="button" id="fontSmaller" aria-label="Kleinere tekst">A−</button>
+        <button type="button" id="fontBigger" aria-label="Grotere tekst">A+</button>
+    </div>
+
+      <li>
+        <button class="search-button" type="button">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 410.587 410.588"
                 xml:space="preserve" fill="#ffffff" stroke="#ffffff" width="50%">
@@ -41,25 +44,55 @@
                 </g>
               </svg>
             </button>
-          </li>
+      </li>
 
-          <!-- Hamburger -->
-          <li>
-            <button class="hamburger-streepjes" id="hamburgerBtn" aria-label="Menu" type="button">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+      <li>
+        <button class="hamburger-streepjes"
+                id="hamburgerBtn"
+                aria-label="Menu"
+                aria-expanded="false"
+                type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </li>
+    </ul>
+  </nav>
 
-            <ul class="hamburger-menu" id="hamburgerMenu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  
+  <div class="hamburger-popup" id="hamburgerMenu" hidden>
+    <nav aria-label="Menu">
+      <ul class="menu-cards">
+        <li>
+          <a href="#pastdrops" class="menu-card">
+            <i class="fa-solid fa-stopwatch"></i>
+            <span>GONE SOON</span>
+          </a>
+        </li>
+        <li>
+          <a href="#upcoming" class="menu-card">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>UPCOMING DROPS</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="menu-links">
+        <li><a href="#track">TRACK MY ORDER</a></li>
+        <li><a href="#community">COMMUNITY DESIGNS</a></li>
+        <li><a href="#faqs">FAQS</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+      </ul>
+
+      <ul class="menu-links muted">
+        <li><a href="#shipping">SHIPPING POLICY</a></li>
+        <li><a href="#terms">TERMS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
     <main>
       <section class="timeline">
@@ -235,7 +268,7 @@
         <li>Find My Youtooz</li>
       </ul>
     </footer>
-
+     <audio id="hoverSound" src="mp3/glittergeluid.mp3" preload="auto"></audio>
     <script defer src="scripts/script.js"></script>
   </body>
 </html>
