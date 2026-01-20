@@ -218,6 +218,5 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3. /* chatgpt hoe zorg ervooor dat de afbeeldingen die ik heb reageren op de klik en groot ernaast komen*/
   4. light dark mode /*bron: uit dlo*/
   5. form van https://www.w3schools.com/html/html_forms.asp
-  6. 
-
+  6. loading effect bij de add to cart java script met behulpt van chatgpt 
 </details>
