@@ -217,6 +217,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. /*bron chatgpt ik vroeg voor een bounce effect*/
   3. /* chatgpt hoe zorg ervooor dat de afbeeldingen die ik heb reageren op de klik en groot ernaast komen*/
   4. light dark mode /*bron: uit dlo*/
-  5. 
+  5. form van https://www.w3schools.com/html/html_forms.asp
+  6. 
 
 </details>
