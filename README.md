@@ -57,7 +57,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-  MIjn grootste bevinding is dat mijn hele website bestaat uit divjes.Mijn hele website is ook erg moeilijk veel code is geschreven op een hele moeilijke manier. verder is het zeker niet semantisch. 
+  Mijn grootste bevinding is dat mijn hele website bestaat uit divjes.Mijn hele website is ook erg moeilijk veel code is geschreven op een hele moeilijke manier. verder is het zeker niet semantisch. 
+  Ze hebben ook geen light dark mode. Verder hebben is hun screenreader ook erg slecht meeste stukken worden niet voorgelezen. 
   
    <img src="readme-images/test1.jpg" width="375px" alt="bestaan uit allemaal divjes">
     <img src="readme-images/test2.jpg" width="375px" alt="bestaan uit allemaal divjes">
@@ -78,11 +79,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### de hele pagina: 
   <img src="readme-images/fedcmdschets.png" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -97,10 +93,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   ik was nog niet begonnen met het coderen. MIjn feedback kreeg ik vooral op mijn breakdown schets. articals hoeven niet in sections. 
-
-
-  ### Agenda voor meeting
-
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -122,6 +114,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   ik ben pas begonnen met de code. ik heb de header en het begin stuk af maar het gehele html is nog niet compleet. 
+  
 
 
   ### Agenda voor meeting
@@ -129,8 +122,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
+  Ik kreeg als feedback daat het handiger is om te beginnen met alles in html te zetten en daarna pas css te doen. 
+  ik deed alles tegelijk wat niet handig was.
+  
   - meer verdiepen in de oprachten zodat flex box goed werkt
   - verder gaan met de html
 
@@ -146,7 +140,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Mijn website is veel semantischer dan de orginele website. ik heb veel meer betere code geschreven. Ook makkelijkere code die makkelijker is dat die van de orginele website. ik heb amper divjes gerbuikt terwijl de orginele website er alleen maar heeft. 
+  Mijn website is veel semantischer dan de orginele website. ik heb veel meer betere code geschreven. 
+  Ook makkelijkere code die makkelijker is dat die van de orginele website.
+  ik heb amper divjes gerbuikt terwijl de orginele website er alleen maar heeft. 
 
 </details>
 
@@ -160,18 +156,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
+  Ik heb bijna alle html erin staan. ook een aantal javascript functies zoals de timer en de functie op de tweede pagina.
+  ik heb ook een heleboel gedaan aan css. De pagina lijkt bijna op de orginele.
   
 
   ### Agenda voor meeting
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  De feedback die ik heb gekregen is dat ik meer css moet toepassen op de footer en dat ik de html code moet verbeteren.
+  de footer zat er niet goed in en ik heb section waar er divjes horen tte zijn.
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Betere html schrijven
+  - meer javascript
+  - css verbetren vooral tweede pagina
 
 </details>
 
