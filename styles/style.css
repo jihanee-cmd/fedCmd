@@ -60,24 +60,31 @@ footer {
 /* --------------------------
    Algemeen menu
 --------------------------- */
-header nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;  /* logo links, buttons rechts */
-    padding: 0;
-    margin: 0;
+header nav ul{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
 }
 
-header li {
-    margin-left: 10px;
+header nav ul li:first-child{
+  margin-right: auto;
 }
 
-header li:nth-child(2) {
-    margin-left: auto; /* duwt search button naar rechts */
+header img{
+  width: 120px;
+  height: auto;
+  display: block;
 }
 
+header img{
+  width: 120px;   /* pas aan: 90–140px */
+  height: auto;
+  display: block;
+}
 /* --------------------------
    Search button
 --------------------------- */
@@ -100,9 +107,11 @@ header li:nth-child(2) {
     height: 60%;
 }
 /* text grote*/
+
+
 .font-controls{
   display: flex;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .font-controls button{
@@ -1375,4 +1384,27 @@ header.button {
 .footer p{
     text-align: center;
 
+}
+.button{
+  display: flex;
+  justify-content: flex-end; /* duwt alles naar rechts */
+  align-items: center;
+  padding: 1em;
+}
+
+.close-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
 }
